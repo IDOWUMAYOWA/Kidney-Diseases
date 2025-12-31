@@ -1,0 +1,7 @@
+prefix=/home/ims24/Kidney-Diseases/mlop
+includedir=${prefix}/include
+
+Name: XwaylandProto
+Description: Xwayland extension headers
+Version: 1.0
+Cflags: -I${includedir}

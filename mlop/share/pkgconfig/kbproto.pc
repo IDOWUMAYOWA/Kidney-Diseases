@@ -1,0 +1,7 @@
+prefix=/home/ims24/Kidney-Diseases/mlop
+includedir=${prefix}/include
+ 
+Name: KBProto
+Description: KB extension headers
+Version: 1.0.7
+Cflags: -I${includedir}
