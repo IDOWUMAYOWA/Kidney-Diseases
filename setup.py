@@ -8,7 +8,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "Kidney-Diseases"
 AUTHOR_USER_NAME = "IDOWUMAYOWA"
-SRC_REPO = "kidneyproject"
+SRC_REPO = "MLProject"
 AUTHOR_EMAIL = "sangotadeidowu@yahoo.com"
 
 

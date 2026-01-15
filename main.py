@@ -1,3 +1,3 @@
-from KidneyProject import logger
+from MLProject import logger
 
-logger.info("Starting the Kidney Project application...")
+logger.info("Starting the ML Project application...")
