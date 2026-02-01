@@ -1,3 +1,13 @@
 from MLProject import logger
+from MLProject.pipeline.staging_01_data_ingestion import DataIngestionTrainingPipeline
 
-logger.info("Starting the ML Project application...")
+
+STAGE_NAME = "Data Ingestion stage"
+try:
+   logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<") 
+   data_ingestion = DataIngestionTrainingPipeline()
+   data_ingestion.main()
+   logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+except Exception as e:
+        logger.exception(e)
+        raise e
