@@ -3,6 +3,14 @@ from MLProject.pipeline.staging_01_data_ingestion import DataIngestionTrainingPi
 from MLProject.pipeline.stage_02_data_validation import DataValidationTrainingPipeline
 from MLProject.pipeline.staging_03_data_transformation import DataTransformationTrainingPipeline
 from MLProject.pipeline.staging_04_model_training import ModelTrainerTrainingPipeline
+from MLProject.pipeline.staging_05_model_evaluation import ModelEvaluationTrainingPipeline
+import dagshub
+
+dagshub.init(
+    repo_owner="imayowa22",
+    repo_name="Kidney-Diseases",
+    mlflow=True
+)
 
 STAGE_NAME = "Data Ingestion stage"
 try:
@@ -44,3 +52,12 @@ except Exception as e:
         logger.exception(e)
         raise e
 
+STAGE_NAME = "Model evaluation stage"
+try:
+   logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<") 
+   data_ingestion = ModelEvaluationTrainingPipeline()
+   data_ingestion.main()
+   logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+except Exception as e:
+        logger.exception(e)
+        raise e
